@@ -1,0 +1,8 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+
+target 'GzoneLib', :exclusive => true do
+  pod "GzoneLib", :path => "../"
+
+  
+end
