@@ -2,7 +2,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 
 target 'GzoneLib', :exclusive => true do
-  pod "GzoneLib", :path => "../"
-
-  
+end
+target 'GzFlurry', :exclusive => true do
+    pod 'FlurrySDK', '~> 5.4.0'
 end

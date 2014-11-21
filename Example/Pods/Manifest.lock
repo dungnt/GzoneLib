@@ -1,14 +1,12 @@
 PODS:
-  - GzoneLib (0.1.0)
+  - FlurrySDK (5.4.0):
+    - FlurrySDK/FlurrySDK (= 5.4.0)
+  - FlurrySDK/FlurrySDK (5.4.0)
 
 DEPENDENCIES:
-  - GzoneLib (from `../`)
-
-EXTERNAL SOURCES:
-  GzoneLib:
-    :path: ../
+  - FlurrySDK (~> 5.4.0)
 
 SPEC CHECKSUMS:
-  GzoneLib: c342cee08f35457ab3dff1fe22c6dc871b935d1f
+  FlurrySDK: bed9e5598353f867508d164795a451e3ada92cb6
 
 COCOAPODS: 0.35.0.rc2
