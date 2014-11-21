@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
     s.homepage         = "https://github.com/dungnt/GzoneLib"
     s.license          = 'MIT'
     s.author           = { "dungnt" => "dung.nt@gzone.com.vn" }
-    s.source           = { :git => "https://github.com/dungnt/GzoneLib.git", :tag => "0.1.0" }
+    s.source           = { :git => "https://github.com/dungnt/GzoneLib.git", :tag => s.version.to_s }
     s.platform     = :ios, '7.0'
     s.requires_arc = true
     s.source_files = 'Pod/Classes/*.{h,m}'
