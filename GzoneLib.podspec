@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
     }
     s.subspec 'GzFileAmazonUpload' do |a|
         a.source_files = 'Pod/Classes/GzFileAmazonUpload/*.{h,m}'
-        a.dependency 'AFNetworking', '~> 2.4.1'
+        a.dependency 'AFNetworking'
     end
     s.subspec 'GzCrashLogMessage' do |a1|
         a1.source_files = 'Pod/Classes/GzCrashLogMessage/*.{h,m}'
@@ -30,6 +30,6 @@ Pod::Spec.new do |s|
     end
     s.subspec 'GzNetworking' do |a4|
         a4.source_files = 'Pod/Classes/GzNetworking/*.{h,m}'
-        a4.dependency 'AFNetworking', '~> 2.5.0'
+        a4.dependency 'AFNetworking'
     end
 end
