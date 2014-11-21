@@ -7,8 +7,17 @@
 //
 
 #import "GzFlurry.h"
-
+static GzFlurry *share;
 @implementation GzFlurry
+
++(id)ShareManager{
+    if(!share){
+        share = [[GzFlurry alloc]init];
+    }
+    return share;
+}
+
+
 -(void)ConfigFlurryWithApiKey:(NSString *)api_key{
     if(!api_key || api_key.length==0){
         NSLog(@"api key input false");

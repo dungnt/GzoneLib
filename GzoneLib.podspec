@@ -25,7 +25,11 @@ Pod::Spec.new do |s|
         a2.dependency 'Reachability', '~> 3.1.1'
     end
     s.subspec 'GzFlurry' do |a3|
-    a3.source_files = 'Pod/Classes/GzFlurry/*.{h,m}'
-    a3.dependency 'FlurrySDK', '~> 5.4.0'
+        a3.source_files = 'Pod/Classes/GzFlurry/*.{h,m}'
+        a3.dependency 'FlurrySDK', '~> 5.4.0'
+    end
+    s.subspec 'GzNetworking' do |a4|
+        a4.source_files = 'Pod/Classes/GzNetworking/*.{h,m}'
+        a4.dependency 'AFNetworking', '~> 2.5.0'
     end
 end

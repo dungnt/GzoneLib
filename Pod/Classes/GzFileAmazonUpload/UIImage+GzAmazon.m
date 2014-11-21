@@ -311,6 +311,7 @@ NSString * const AFAmazonS3ManagerErrorDomain = @"com.alamofire.networking.s3.er
 
 
 @implementation UIImage (GzAmazon)
+
 -(void)getAmazoneLinkWithAccess_Key:(NSString *)AccessKey SecretAccess:(NSString *)secretAccess bucketname:(NSString *)bucket subfolder:(NSString *)folder success:(void (^)(NSString * urlImage))success{
     
     AFAmazonS3Manager *s3Manager = [[AFAmazonS3Manager alloc] initWithAccessKeyID:AccessKey secret:secretAccess];

@@ -6,3 +6,7 @@ end
 target 'GzFlurry', :exclusive => true do
     pod 'FlurrySDK', '~> 5.4.0'
 end
+target 'GzNetworking', :exclusive => true do
+    pod 'AFNetworking', '~> 2.5.0'
+end
+

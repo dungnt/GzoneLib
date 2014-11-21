@@ -11,9 +11,13 @@
 #import "Flurry.h"
 
 @interface GzFlurry : NSObject
+
++(id)ShareManager;
+
 //===========================================================
 //  Start Secssion With API KEY
 //===========================================================
+
 -(void)ConfigFlurryWithApiKey:(NSString *)api_key;
 
 @end

@@ -55,6 +55,36 @@ fi
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>11101AB1D895996434B41ED8</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
 		<key>1F64F1CD4570B14ADC54CBD2</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -122,6 +152,13 @@ fi
 		<dict>
 			<key>fileRef</key>
 			<string>52F033805607088DA7DA596D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3B6196B5F6AEF6EB5BAF0E91</key>
+		<dict>
+			<key>fileRef</key>
+			<string>FE5C0427B4F9786158EAC8BC</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -415,55 +452,6 @@ fi
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>403653F41A1F289B009A583C</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>403653F71A1F289B009A583C</string>
-				<string>403653F51A1F289B009A583C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>GzFlurryTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>403653F51A1F289B009A583C</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>403653F61A1F289B009A583C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>403653F61A1F289B009A583C</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>403653F71A1F289B009A583C</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>GzFlurryTests.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>403653F91A1F289B009A583C</key>
 		<dict>
 			<key>baseConfigurationReference</key>
@@ -534,6 +522,8 @@ fi
 			</array>
 			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
@@ -586,6 +576,418 @@ fi
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>403654041A1F33A8009A583C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>403654131A1F33A9009A583C</string>
+				<string>403654101A1F33A9009A583C</string>
+				<string>403654311A1F3410009A583C</string>
+				<string>4036540D1A1F33A9009A583C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>403654051A1F33A8009A583C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>3B6196B5F6AEF6EB5BAF0E91</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>403654061A1F33A8009A583C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>403654161A1F33A9009A583C</string>
+				<string>4036541B1A1F33A9009A583C</string>
+				<string>403654181A1F33A9009A583C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>403654071A1F33A8009A583C</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>4036542C1A1F33A9009A583C</string>
+			<key>buildPhases</key>
+			<array>
+				<string>11101AB1D895996434B41ED8</string>
+				<string>403654041A1F33A8009A583C</string>
+				<string>403654051A1F33A8009A583C</string>
+				<string>403654061A1F33A8009A583C</string>
+				<string>8C0BF47331AD9D6EA363544B</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>GzNetworking</string>
+			<key>productName</key>
+			<string>GzNetworking</string>
+			<key>productReference</key>
+			<string>403654081A1F33A8009A583C</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>403654081A1F33A8009A583C</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>GzNetworking.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>403654091A1F33A8009A583C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4036542E1A1F33FA009A583C</string>
+				<string>4036540E1A1F33A9009A583C</string>
+				<string>4036540F1A1F33A9009A583C</string>
+				<string>403654111A1F33A9009A583C</string>
+				<string>403654121A1F33A9009A583C</string>
+				<string>403654141A1F33A9009A583C</string>
+				<string>403654171A1F33A9009A583C</string>
+				<string>403654191A1F33A9009A583C</string>
+				<string>4036540A1A1F33A9009A583C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>GzNetworking</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4036540A1A1F33A9009A583C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4036540B1A1F33A9009A583C</string>
+				<string>4036540C1A1F33A9009A583C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4036540B1A1F33A9009A583C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4036540C1A1F33A9009A583C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4036540D1A1F33A9009A583C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4036540C1A1F33A9009A583C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4036540E1A1F33A9009A583C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4036540F1A1F33A9009A583C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>AppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>403654101A1F33A9009A583C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4036540F1A1F33A9009A583C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>403654111A1F33A9009A583C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>ViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>403654121A1F33A9009A583C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>ViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>403654131A1F33A9009A583C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>403654121A1F33A9009A583C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>403654141A1F33A9009A583C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>403654151A1F33A9009A583C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>403654151A1F33A9009A583C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>403654161A1F33A9009A583C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>403654141A1F33A9009A583C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>403654171A1F33A9009A583C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>403654181A1F33A9009A583C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>403654171A1F33A9009A583C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>403654191A1F33A9009A583C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4036541A1A1F33A9009A583C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>LaunchScreen.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4036541A1A1F33A9009A583C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/LaunchScreen.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4036541B1A1F33A9009A583C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>403654191A1F33A9009A583C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>403654281A1F33A9009A583C</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>80C1071242746892D9240419</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>GzNetworking/Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>403654291A1F33A9009A583C</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>77736B5F546C20572945DAF7</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>GzNetworking/Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>4036542C1A1F33A9009A583C</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>403654281A1F33A9009A583C</string>
+				<string>403654291A1F33A9009A583C</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>4036542E1A1F33FA009A583C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4036542F1A1F3410009A583C</string>
+				<string>403654301A1F3410009A583C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>GzNetworking</string>
+			<key>path</key>
+			<string>../../Pod/Classes/GzNetworking</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4036542F1A1F3410009A583C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>GzNetworking.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>403654301A1F3410009A583C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>GzNetworking.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>403654311A1F3410009A583C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>403654301A1F3410009A583C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>407FD5531A1DF53E00047879</key>
 		<dict>
 			<key>isa</key>
@@ -619,7 +1021,7 @@ fi
 				<string>60FF7A9C1954A5C5007DD14C</string>
 				<string>6003F5B5195388D20070C39A</string>
 				<string>403653DA1A1F289B009A583C</string>
-				<string>403653F41A1F289B009A583C</string>
+				<string>403654091A1F33A8009A583C</string>
 				<string>6003F58C195388D20070C39A</string>
 				<string>6003F58B195388D20070C39A</string>
 				<string>9ECA5C868BF4786CB9985402</string>
@@ -642,6 +1044,11 @@ fi
 				<key>TargetAttributes</key>
 				<dict>
 					<key>403653D81A1F289B009A583C</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>6.1</string>
+					</dict>
+					<key>403654071A1F33A8009A583C</key>
 					<dict>
 						<key>CreatedOnToolsVersion</key>
 						<string>6.1</string>
@@ -682,6 +1089,7 @@ fi
 			<array>
 				<string>6003F5AD195388D20070C39A</string>
 				<string>403653D81A1F289B009A583C</string>
+				<string>403654071A1F33A8009A583C</string>
 			</array>
 		</dict>
 		<key>6003F585195388D10070C39A</key>
@@ -718,6 +1126,7 @@ fi
 				<string>6003F58A195388D20070C39A</string>
 				<string>6003F5AE195388D20070C39A</string>
 				<string>403653D91A1F289B009A583C</string>
+				<string>403654081A1F33A8009A583C</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -736,6 +1145,7 @@ fi
 				<string>6003F5AF195388D20070C39A</string>
 				<string>52F033805607088DA7DA596D</string>
 				<string>D1ED7F6514E94740A13F7FC7</string>
+				<string>FE5C0427B4F9786158EAC8BC</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -1263,6 +1673,36 @@ fi
 			<key>showEnvVarsInLog</key>
 			<string>0</string>
 		</dict>
+		<key>77736B5F546C20572945DAF7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-GzNetworking.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-GzNetworking/Pods-GzNetworking.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>80C1071242746892D9240419</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-GzNetworking.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-GzNetworking/Pods-GzNetworking.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>8B2B7C1925B3B7E9715060F9</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1277,6 +1717,30 @@ fi
 			<string>Pods/Target Support Files/Pods-GzFlurry/Pods-GzFlurry.release.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8C0BF47331AD9D6EA363544B</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-GzNetworking/Pods-GzNetworking-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
 		</dict>
 		<key>925B4FCB547BA022379D72D6</key>
 		<dict>
@@ -1323,6 +1787,8 @@ fi
 				<string>21542B83B114AEEA5786ABA5</string>
 				<string>A0F51B81E8E8F9B49698A77F</string>
 				<string>8B2B7C1925B3B7E9715060F9</string>
+				<string>80C1071242746892D9240419</string>
+				<string>77736B5F546C20572945DAF7</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -1371,6 +1837,19 @@ fi
 			<string>PBXFileReference</string>
 			<key>path</key>
 			<string>libPods-GzFlurry.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>FE5C0427B4F9786158EAC8BC</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-GzNetworking.a</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
